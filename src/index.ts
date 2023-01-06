@@ -1,4 +1,4 @@
-import Express, { Application, Request, Response } from 'express'
+import Express, { Application, Request, Response } from 'express';
 import imageRoute from './controllers/images';
 
 const app: Application = Express();
