@@ -17,6 +17,7 @@ export default (req: Request, res: Response) => {
         .sendFile(`${width}-${height}-${filename}`, { root: 'cache' });
     })
     .catch((err) => {
+      console.log(err)
       res.status(200).send('File not found or incorrect query parameters');
     });
 };

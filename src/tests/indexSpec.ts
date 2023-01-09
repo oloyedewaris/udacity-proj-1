@@ -1,7 +1,6 @@
 import supertest from 'supertest';
 import app from '../index';
 import { existsSync, unlinkSync } from 'fs';
-import imageProcessing from '../utils/imageProcessing';
 import sharp from 'sharp';
 import path from 'path';
 
@@ -15,7 +14,7 @@ describe('Test endpoints', () => {
         expect(response.status).toBe(200);
         done();
       })
-      .catch((err) => done());
+      .catch(() => done());
   });
 
   it('ensure image resizing is working', (done) => {

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { mkdirSync, existsSync, unlinkSync, unlink } from 'fs';
+import { mkdirSync, existsSync } from 'fs';
 import imageProcessing from '../utils/imageProcessing';
 
 export default (req: Request, res: Response): void => {
